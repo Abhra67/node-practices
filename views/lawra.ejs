@@ -1,0 +1,13 @@
+<!-- we can add small part of code using include -->
+<%-  include("includessss/header.ejs") %> 
+<body>
+    <h1>this page belongs to@ <%= datan.name %></h1>
+    <h1>followers: <%= datan.followers %> &nbsp;&nbsp;&nbsp;following <%= datan.following %></h1>
+    <hr>
+    <% for(post of datan.posts){%>
+       <img src="<%= post.image %>" alt="image">
+       <h1>likes: <%= post.likes %> &nbsp;&nbsp;&nbsp;comments <%= post.comments %></h1>
+       <hr>
+   <% } %>
+</body>
+</html>
